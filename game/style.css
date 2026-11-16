@@ -1,0 +1,41 @@
+/* NOVADRIFT page shell: the canvas is the game; the page just frames it. */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  background: #05060f radial-gradient(1200px 700px at 50% 42%, #101736 0%, #05060f 62%);
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+}
+
+#stage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game {
+  display: block;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  background: #05060f;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(140, 170, 255, 0.16), 0 24px 80px rgba(0, 0, 0, 0.75),
+    0 0 90px rgba(80, 110, 255, 0.12);
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#fallback {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #dfe6ff;
+  font-size: 17px;
+  text-align: center;
+}
